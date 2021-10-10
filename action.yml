@@ -1,16 +1,10 @@
 name: "Chkk Post Renderer"
 description: "Apply Chkk Ops during Helm Post Rendering."
 inputs:
-  kubeconfig-data:
-    description: "The Kubeconfig file contents. To be imported as Secret in GitHub."
-    required: true
   post-renderer-config:
     description: "The yaml config file to store Checklists and Suppressions."
     required: false
     default: "${{ .github.workspace }}"
-  chkk-access-token:
-    description: "The Chkk Token for invoking Chkk API. To be imported as Secret in GitHub."
-    required: true
 
 runs:
   using: "composite"
