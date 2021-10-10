@@ -10,5 +10,5 @@ runs:
   steps:
     - run: if [ ${{inputs.post-renderer-config}} != "" ]; then export $CONFIG=${{inputs.post-renderer-config}}; fi
       shell: sh
-    - run: chmod +x ${{github.action_path}}/init.sh && ./${{github.action_path}}/init.sh
+    - run: chmod +x ./init.sh && ./init.sh
       shell: sh
