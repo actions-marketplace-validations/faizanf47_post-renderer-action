@@ -4,7 +4,7 @@ inputs:
   post-renderer-config:
     description: "The yaml config file to store Checklists and Suppressions."
     required: false
-    default: "${{ .github.workspace }}"
+    default: ${{ .github.workspace }}/config.yaml
 
 runs:
   using: "composite"
