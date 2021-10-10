@@ -8,7 +8,7 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: echo ${{github.action_path}}
+    - run: ls ${{github.action_path}}
       shell: sh
     - run: if [ ${{inputs.post-renderer-config}} != "" ]; then export $CONFIG=${{inputs.post-renderer-config}}; fi
       shell: sh
